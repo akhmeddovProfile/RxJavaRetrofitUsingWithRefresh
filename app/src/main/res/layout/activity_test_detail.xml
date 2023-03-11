@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="5dp"
+   android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:visibility="gone"
+    android:id="@+id/titleupdate"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Update"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:textSize="36sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/titleupdate"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:cardCornerRadius="20dp">
+        <ImageView
+            android:id="@+id/detailImage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:onClick="setUpdateImage"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[5]" />
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/detailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor=" #1A2B49"
+        android:textStyle="bold"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/cardView"
+        android:text="Micheal Jackson"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/detailAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor=" #1A2B49"
+        android:textStyle="bold"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/detailName"
+        android:text="20"
+        android:textSize="18dp" />
+
+    <CheckBox
+        android:id="@+id/detailCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/detailAge"
+        android:textColor="@color/black"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/updateCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/detailAge"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/detailCheckbox"
+        android:textColor="@color/black"
+        android:text="CheckBox" />
+
+    <RadioButton
+        android:id="@+id/radioButtonDetail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_below="@+id/detailCheckbox"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:text="Test1"
+        />
+
+    <RadioButton
+        android:id="@+id/radioButtonDetail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailCheckbox"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/radioButtonDetail1"
+        android:text="Test2" />
+
+    <RadioButton
+        android:id="@+id/radioButtonDetail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/detailCheckbox"
+        android:layout_toRightOf="@id/radioButtonDetail2"
+        android:text="Test3" />
+
+    <RadioButton
+        android:id="@+id/radioButtonDetail4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@id/detailCheckbox"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/radioButtonDetail3"
+        android:text="Test4" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+       android:layout_alignParentEnd="true"
+        android:layout_below="@+id/cardView"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <RadioButton
+        android:id="@+id/radioButtonUpdate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_below="@+id/radioButtonDetail1"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:text="Test1"
+        />
+
+    <RadioButton
+        android:id="@+id/radioButtonUpdate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButtonDetail1"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/radioButtonUpdate1"
+        android:visibility="gone"
+        android:text="Test2" />
+
+    <RadioButton
+        android:id="@+id/radioButtonUpdate3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/radioButtonDetail2"
+        android:layout_toRightOf="@id/radioButtonUpdate2"
+        android:visibility="gone"
+        android:text="Test3" />
+
+    <RadioButton
+        android:id="@+id/radioButtonUpdate4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@+id/radioButtonDetail3"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/radioButtonUpdate3"
+        android:visibility="gone"
+        android:text="Test4" />
+
+    <TextView
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_below="@+id/delete"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/savechange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save changes"
+        android:textAllCaps="false"
+        android:layout_below="@+id/radioButtonUpdate3"/>
+
+</RelativeLayout>
